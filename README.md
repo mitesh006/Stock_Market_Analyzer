@@ -4,9 +4,9 @@
 A web-based stock market analyzer that provides real-time stock data visualization and basic AI-based trend prediction.
 
 ## Team Members
-- Full Stack Developer
-- Backend & Database Developer
-- AI/ML Developer
+- Mitesh - Full Stack Developer
+- Harshit - Backend & Database Developer
+- Neem - AI/ML Developer
 
 ## Technologies Used
 - Frontend: HTML, CSS, JavaScript, Bootstrap
