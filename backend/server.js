@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("header.location('../frontend/index.html');");
+  res.send("Stock Market Analyzer API Running");
 });
 
 const PORT = 5000;
