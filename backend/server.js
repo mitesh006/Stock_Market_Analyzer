@@ -5,6 +5,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const connectDB = require("./config/db");
+connectDB();
+
 app.get("/", (req, res) => {
   res.send("Stock Market Analyzer API Running");
 });
