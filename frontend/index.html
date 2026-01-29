@@ -15,11 +15,25 @@
   <p id="result" class="mt-3 text-center"></p>
 
   <script>
-    function searchStock() {
+    async function searchStock() {
       const symbol = document.getElementById("stockSymbol").value;
-      document.getElementById("result").innerText =
-        "Searching stock: " + symbol;
+      const result = document.getElementById("result");
+      
+      result.innerText = "Loading...";
+
+      try {
+        const response = await fetch(
+          `http://localhost:5000/api/stocks/price/${symbol}`
+        );
+        const data = await response.json();
+        
+        const price = data["Global Quote"]["05. price"];
+        result.innerText = `Current Price of ${symbol.toUpperCase()}: $${price}`;
+      } catch (err) {
+        result.innerText = "Error fetching stock data.";
+      }
     }
+
   </script>
 
 </body>
